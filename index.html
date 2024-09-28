@@ -3,65 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will you go to Prom with me?</title>
+    <title>Will You Be My Prom Date?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container" id="mainContent">
-        <div class="header">
-            <h1 class="header_text">Will you go to Prom with me?</h1>
-            <p class="sub_text">Here are a few reasons why we should go together...</p>
-        </div>
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <h1 class="title">Will You Be My Prom Date?</h1>
+    </div>
 
-        <!-- Why You Should Go Section -->
-        <div class="why_go">
-            <div class="reason">
-                <img src="/Ask-Her-Out-main/Img/WhatsApp Image 2024-09-28 at 17.51.40_c6aadad2.jpg" alt="Cute Memory 1">
-                <p class="caption">Because we have the best time together!</p>
-            </div>
-            <div class="reason">
-                <img src="/Ask-Her-Out-main/Img/WhatsApp Image 2024-09-28 at 17.52.38_6e608ff9.jpg" alt="Cute Memory 2">
-                <p class="caption">You're the most fun and beautiful person I know.</p>
-            </div>
-            <div class="reason">
-                <img src="https://example.com/photo3.jpg" alt="Cute Memory 3">
-                <p class="caption">We've made so many great memories, let's make one more!</p>
-            </div>
-        </div>
 
-        <!-- Buttons Section -->
-        <div class="buttons">
-            <button class="btn" id="yesButton" onclick="playVideo()">Yes, I will!</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+     <!-- Reasons to Say Yes -->
+     <div class="reasons-section">
+        <h2>Why You Should Be My Prom Date</h2>
+        <ul class="reasons">
+            <li>I have a dress that can match with you</li>
+            <li>Our prom photos would be amazing because you make everything look better .</li>
+            <li>If you say yes, I can cook something special for you for the next few days [Clear bribe ].</li>
+            <li>I don’t think anyone else will ask me, so I’m a very good option.</li>
+            <li>Prom is special, but you’re even more special to me.</li>
+        </ul>
+    </div>
+
+
+    <!-- Photo Carousel Section -->
+    <div class="photo-carousel">
+        <div class="carousel">
+            <img src="/Ask-Her-Out-main/Img/WhatsApp Image 2024-09-28 at 17.51.40_c6aadad2.jpg" alt="Memory 1">
+            <p class="caption">You laugh at my silly jokes, which is great</p>
+        </div>
+        <div class="carousel">
+            <img src="/Ask-Her-Out-main/Img/WhatsApp Image 2024-09-28 at 17.52.38_6e608ff9.jpg" alt="Memory 2">
+            <p class="caption">Our height ratio is also perfect</p>
+        </div>
+        <div class="carousel">
+            <img src="/Ask-Her-Out-main/Img/WhatsApp Image 2024-09-28 at 18.11.49_8b83fc21.jpg" alt="Memory 3">
+            <p class="caption">We can create another story together.</p>
         </div>
     </div>
 
-    <!-- Video Section (Hidden initially) -->
-    <div id="videoContainer" class="hidden">
-        <video id="promVideo" autoplay loop muted playsinline>
+   
+    <!-- Yes Buttons Section -->
+    <div class="button-section">
+        <button class="yes-button" onclick="playVideo()">Yes</button>
+        <button class="yes-button" onclick="playVideo()">Of Course Yes!</button>
+    </div>
+
+    <!-- Hidden Video Section -->
+    <div id="video-section" class="hidden">
+        <video id="prom-video" autoplay loop muted playsinline>
             <source src="/Ask-Her-Out-main/Img/WhatsApp Video 2024-09-28 at 17.55.15_175abfdf.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
 
-    <script>
-        function playVideo() {
-            // Hide the main content
-            document.getElementById('mainContent').style.display = 'none';
-            
-            // Show the video container
-            document.getElementById('videoContainer').classList.remove('hidden');
-            
-            // Play the video
-            document.getElementById('promVideo').play();
-        }
-
-        function moveButton() {
-            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-            document.getElementById('noButton').style.left = `${x}px`;
-            document.getElementById('noButton').style.top = `${y}px`;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

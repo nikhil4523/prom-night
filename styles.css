@@ -1,105 +1,209 @@
+/* Body and Background Theme */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: rgb(189, 225, 122);
-    font-family: 'Nunito', sans-serif;
     margin: 0;
-    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    /* Pink and white gradient background */
+    background: linear-gradient(to bottom, #ffcccc, #ffffff);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e00000; /* Red text color */
 }
 
-.container {
+/* Welcome Section */
+.welcome-section {
     text-align: center;
+    background-color:#ff8592;
+    padding: 50px;
+    color: #e00000; /* Red color for the welcome text */
+    animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
 }
 
-.header_text {
+.title {
     font-size: 50px;
     font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
-.sub_text {
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 30px;
+.tagline {
+    font-size: 24px;
+    margin-bottom: 40px;
 }
 
-.why_go {
+/* Photo Carousel */
+.photo-carousel {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    animation: slideIn 2s ease-in-out; /* Smooth slide-in animation */
 }
 
-.reason {
-    width: 250px;
-    margin: 10px;
+.carousel {
     text-align: center;
+    margin: 0 15px;
 }
 
-.reason img {
-    width: 100%;
+.carousel img {
+    width: 250px;
+    height: auto;
     border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .caption {
     margin-top: 10px;
-    font-size: 18px;
-    font-family: 'Dancing Script', cursive;  /* Romantic, handwritten font */
+    font-style: italic;
+    color: #e00000; /* Red color for the image captions */
+}
+
+
+ul {
+    list-style-position: inside; /* Ensures bullet points are inside the border */
+    padding-left: 0; /* Align the bullets closer to the left */
+    margin-left: 30%; 
+    width: 50%; /* Remove any default margin */
+}
+
+li {
+    position: relative; /* Ensures the border surrounds the bullet and text */
+    padding: 10px; /* Add some padding inside the box */
+    margin-bottom: 10px; /* Add space between each list item */
+    border: 2px solid #ccc; /* Box border for each li */
+    border-radius: 8px; /* Rounded corners for the box */
+    background-color: #f9f9f9; /* Light background color for li */
+    list-style-type: disc; /* Default bullet point style */
+    max-width: 400px; /* Set a max-width to control the width of the list items */
+}
+
+li::before {
+    content: ''; /* Ensures there is no overlap with custom styles */
+}
+
+
+
+/* Reasons Section */
+.reasons-section {
+    text-align: center;
+    margin: 40px;
+    animation: zoomIn 2s ease-in-out; /* Zoom in animation */
+}
+
+.reasons-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #e00000; /* Red color for the heading */
+}
+
+.reasons {
+    list-style: none;
+    padding: 0;
+    color: #e00000; /* Red color for the reasons text */
+}
+
+.reasons li {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Button Section with Two Yes Options */
+.button-section {
+    text-align: center;
+    margin-top: 40px;
+    animation: bounceIn 1.5s ease-in-out; /* Bounce effect for buttons */
+}
+
+.yes-button {
+    background-color: #ff4b5c; /* Pinkish red buttons */
     color: white;
-}
-
-.buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.btn {
-    background-color: white;
-    color: rgb(233, 48, 48);
-    padding: 15px 32px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
+    padding: 15px 30px;
     border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px; /* Space between the two buttons */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#yesButton:hover {
-    background-color: rgb(233, 48, 48);
-    color: white;
+.yes-button:hover {
+    background-color: #e33b4b;
+    transform: scale(1.1); /* Slight zoom effect when hovered */
 }
 
-#noButton {
-    position: absolute;
-    transition: 0.5s;
-}
-
-#videoContainer {
+/* Video Section */
+#video-section {
     display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: black;
     position: fixed;
     top: 0;
-    left: 0;
-}
-
-#promVideo {
+    left: 25%;
+   
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: linear-gradient(to bottom, #ffcccc, #ffffff); /* Pink and white gradient */
+
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 }
 
+
+    #prom-video {
+        width: 50%; /* 50% of the width */
+        height: 100%; /* 50% of the height */
+        object-fit: cover; /* Ensure the video fits nicely within the container */
+        border-radius: 12px; /* Optional: Add rounded corners for a smoother look */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add a soft shadow around the video */
+    }
+
+
+/* Hidden class to hide elements */
 .hidden {
     display: none;
+}
+
+/* Animations */
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Zoom in animation */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Bounce in animation for buttons */
+@keyframes bounceIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
